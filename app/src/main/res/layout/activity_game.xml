@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.game.GameActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/GameScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0 - 0"
+        android:textSize="55sp"
+        app:layout_constraintLeft_toLeftOf="@id/gameBoardVerticalGuideline"
+        app:layout_constraintRight_toRightOf="@id/gameBoardVerticalGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/GamePlayer1"
+        style="@style/GamePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/GameScore"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/GameScore" />
+
+    <TextView
+        android:id="@+id/GamePlayer2"
+        style="@style/GamePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/GameScore"
+        app:layout_constraintLeft_toRightOf="@id/GameScore"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gameBoardHorizontalGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gameBoardVerticalGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/GameBoardColumnMiddleCentre"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toBottomOf="@id/gameBoardHorizontalGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/gameBoardVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/gameBoardVerticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/gameBoardHorizontalGuideline" />
+
+    <Button
+        android:id="@+id/GameBoardColumnMiddleLeft"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerBottom"
+        app:layout_constraintEnd_toStartOf="@id/gameBoardVerticalDividerLeft"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerTop" />
+
+    <Button
+        android:id="@+id/GameBoardColumnMiddleRight"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerBottom"
+        app:layout_constraintStart_toEndOf="@id/gameBoardVerticalDividerRight"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerTop" />
+
+    <Button
+        android:id="@+id/GameBoardColumnTopCentre"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerTop"
+        app:layout_constraintEnd_toEndOf="@id/gameBoardVerticalDividerRight"
+        app:layout_constraintStart_toStartOf="@id/gameBoardVerticalDividerLeft" />
+
+    <Button
+        android:id="@+id/GameBoardColumnTopLeft"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerTop"
+        app:layout_constraintEnd_toStartOf="@id/gameBoardVerticalDividerLeft" />
+
+    <Button
+        android:id="@+id/GameBoardColumnTopRight"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerTop"
+        app:layout_constraintStart_toEndOf="@id/GameBoardColumnTopCentre" />
+
+    <Button
+        android:id="@+id/GameBoardColumnBottomCentre"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintEnd_toEndOf="@id/gameBoardVerticalDividerRight"
+        app:layout_constraintStart_toStartOf="@id/gameBoardVerticalDividerLeft"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerBottom" />
+
+    <Button
+        android:id="@+id/GameBoardColumnBottomLeft"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintEnd_toStartOf="@id/gameBoardVerticalDividerLeft"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerBottom" />
+
+    <Button
+        android:id="@+id/GameBoardColumnBottomRight"
+        style="@style/BoardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColumnClick"
+        app:layout_constraintStart_toEndOf="@id/gameBoardVerticalDividerRight"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerBottom" />
+
+    <View
+        android:id="@+id/gameBoardHorizontalDividerTop"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:backgroundTint="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/GameBoardColumnMiddleCentre"
+        app:layout_constraintEnd_toEndOf="@id/GameBoardColumnMiddleRight"
+        app:layout_constraintStart_toStartOf="@id/GameBoardColumnMiddleLeft" />
+
+    <View
+        android:id="@+id/gameBoardHorizontalDividerBottom"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:backgroundTint="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/GameBoardColumnMiddleRight"
+        app:layout_constraintStart_toStartOf="@id/GameBoardColumnMiddleLeft"
+        app:layout_constraintTop_toBottomOf="@id/GameBoardColumnMiddleCentre" />
+
+    <View
+        android:id="@+id/gameBoardVerticalDividerLeft"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/GameBoardColumnBottomCentre"
+        app:layout_constraintLeft_toLeftOf="@id/GameBoardColumnMiddleCentre"
+        app:layout_constraintTop_toTopOf="@id/GameBoardColumnTopCentre" />
+
+    <View
+        android:id="@+id/gameBoardVerticalDividerRight"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/GameBoardColumnBottomCentre"
+        app:layout_constraintRight_toRightOf="@id/GameBoardColumnMiddleCentre"
+        app:layout_constraintTop_toTopOf="@id/GameBoardColumnTopCentre" />
+
+    <Button
+        android:id="@+id/GameButtonRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="start over!"
+        android:textAllCaps="true"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
