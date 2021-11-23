@@ -29,30 +29,30 @@ class GameActivity : AppCompatActivity() {
                 Player(intent.getStringExtra("PLAYER_2").toString().ifEmpty { "Tacie" })
             ),
             ScoreBoard(
-                findViewById(R.id.GamePlayer1),
-                findViewById(R.id.GamePlayer2),
-                findViewById(R.id.GameScore)
+                findViewById(R.id.gamePlayer1),
+                findViewById(R.id.gamePlayer2),
+                findViewById(R.id.gameScore)
             ),
             GameBoard(
                 BoardColumn(
-                    findViewById(R.id.GameBoardColumnTopLeft),
-                    findViewById(R.id.GameBoardColumnTopCentre),
-                    findViewById(R.id.GameBoardColumnTopRight),
+                    findViewById(R.id.gameBoardColumnTopLeft),
+                    findViewById(R.id.gameBoardColumnTopCentre),
+                    findViewById(R.id.gameBoardColumnTopRight),
                 ),
                 BoardColumn(
-                    findViewById(R.id.GameBoardColumnMiddleLeft),
-                    findViewById(R.id.GameBoardColumnMiddleCentre),
-                    findViewById(R.id.GameBoardColumnMiddleRight)
+                    findViewById(R.id.gameBoardColumnMiddleLeft),
+                    findViewById(R.id.gameBoardColumnMiddleCentre),
+                    findViewById(R.id.gameBoardColumnMiddleRight)
                 ),
                 BoardColumn(
-                    findViewById(R.id.GameBoardColumnBottomLeft),
-                    findViewById(R.id.GameBoardColumnBottomCentre),
-                    findViewById(R.id.GameBoardColumnBottomRight)
+                    findViewById(R.id.gameBoardColumnBottomLeft),
+                    findViewById(R.id.gameBoardColumnBottomCentre),
+                    findViewById(R.id.gameBoardColumnBottomRight)
                 )
             ),
         )
 
-        findViewById<Button>(R.id.GameButtonRestart).setOnClickListener {
+        findViewById<Button>(R.id.gameButtonRestart).setOnClickListener {
             Toast.makeText(this, "Resetting the game", Toast.LENGTH_SHORT).show()
             game.reset()
         }

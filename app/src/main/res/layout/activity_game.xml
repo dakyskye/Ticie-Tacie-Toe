@@ -8,7 +8,7 @@
     tools:ignore="HardcodedText">
 
     <TextView
-        android:id="@+id/GameScore"
+        android:id="@+id/gameScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="0 - 0"
@@ -18,21 +18,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/GamePlayer1"
+        android:id="@+id/gamePlayer1"
         style="@style/GamePlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/GameScore"
+        app:layout_constraintBottom_toBottomOf="@id/gameScore"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/GameScore" />
+        app:layout_constraintRight_toLeftOf="@id/gameScore" />
 
     <TextView
-        android:id="@+id/GamePlayer2"
+        android:id="@+id/gamePlayer2"
         style="@style/GamePlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/GameScore"
-        app:layout_constraintLeft_toRightOf="@id/GameScore"
+        app:layout_constraintBottom_toBottomOf="@id/gameScore"
+        app:layout_constraintLeft_toRightOf="@id/gameScore"
         app:layout_constraintRight_toRightOf="parent" />
 
 
@@ -51,7 +51,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <Button
-        android:id="@+id/GameBoardColumnMiddleCentre"
+        android:id="@+id/gameBoardColumnMiddleCentre"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="@id/gameBoardHorizontalGuideline" />
 
     <Button
-        android:id="@+id/GameBoardColumnMiddleLeft"
+        android:id="@+id/gameBoardColumnMiddleLeft"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerTop" />
 
     <Button
-        android:id="@+id/GameBoardColumnMiddleRight"
+        android:id="@+id/gameBoardColumnMiddleRight"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerTop" />
 
     <Button
-        android:id="@+id/GameBoardColumnTopCentre"
+        android:id="@+id/gameBoardColumnTopCentre"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
         app:layout_constraintStart_toStartOf="@id/gameBoardVerticalDividerLeft" />
 
     <Button
-        android:id="@+id/GameBoardColumnTopLeft"
+        android:id="@+id/gameBoardColumnTopLeft"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,16 +101,16 @@
         app:layout_constraintEnd_toStartOf="@id/gameBoardVerticalDividerLeft" />
 
     <Button
-        android:id="@+id/GameBoardColumnTopRight"
+        android:id="@+id/gameBoardColumnTopRight"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onColumnClick"
         app:layout_constraintBottom_toTopOf="@id/gameBoardHorizontalDividerTop"
-        app:layout_constraintStart_toEndOf="@id/GameBoardColumnTopCentre" />
+        app:layout_constraintStart_toEndOf="@id/gameBoardColumnTopCentre" />
 
     <Button
-        android:id="@+id/GameBoardColumnBottomCentre"
+        android:id="@+id/gameBoardColumnBottomCentre"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
         app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerBottom" />
 
     <Button
-        android:id="@+id/GameBoardColumnBottomLeft"
+        android:id="@+id/gameBoardColumnBottomLeft"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@id/gameBoardHorizontalDividerBottom" />
 
     <Button
-        android:id="@+id/GameBoardColumnBottomRight"
+        android:id="@+id/gameBoardColumnBottomRight"
         style="@style/BoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,9 +143,9 @@
         android:layout_height="3dp"
         android:backgroundTint="@color/white"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@id/GameBoardColumnMiddleCentre"
-        app:layout_constraintEnd_toEndOf="@id/GameBoardColumnMiddleRight"
-        app:layout_constraintStart_toStartOf="@id/GameBoardColumnMiddleLeft" />
+        app:layout_constraintBottom_toTopOf="@id/gameBoardColumnMiddleCentre"
+        app:layout_constraintEnd_toEndOf="@id/gameBoardColumnMiddleRight"
+        app:layout_constraintStart_toStartOf="@id/gameBoardColumnMiddleLeft" />
 
     <View
         android:id="@+id/gameBoardHorizontalDividerBottom"
@@ -153,9 +153,9 @@
         android:layout_height="3dp"
         android:backgroundTint="@color/white"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@id/GameBoardColumnMiddleRight"
-        app:layout_constraintStart_toStartOf="@id/GameBoardColumnMiddleLeft"
-        app:layout_constraintTop_toBottomOf="@id/GameBoardColumnMiddleCentre" />
+        app:layout_constraintEnd_toEndOf="@id/gameBoardColumnMiddleRight"
+        app:layout_constraintStart_toStartOf="@id/gameBoardColumnMiddleLeft"
+        app:layout_constraintTop_toBottomOf="@id/gameBoardColumnMiddleCentre" />
 
     <View
         android:id="@+id/gameBoardVerticalDividerLeft"
@@ -164,9 +164,9 @@
         android:backgroundTint="@color/white"
         android:orientation="vertical"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/GameBoardColumnBottomCentre"
-        app:layout_constraintLeft_toLeftOf="@id/GameBoardColumnMiddleCentre"
-        app:layout_constraintTop_toTopOf="@id/GameBoardColumnTopCentre" />
+        app:layout_constraintBottom_toBottomOf="@id/gameBoardColumnBottomCentre"
+        app:layout_constraintLeft_toLeftOf="@id/gameBoardColumnMiddleCentre"
+        app:layout_constraintTop_toTopOf="@id/gameBoardColumnTopCentre" />
 
     <View
         android:id="@+id/gameBoardVerticalDividerRight"
@@ -175,12 +175,12 @@
         android:backgroundTint="@color/white"
         android:orientation="vertical"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/GameBoardColumnBottomCentre"
-        app:layout_constraintRight_toRightOf="@id/GameBoardColumnMiddleCentre"
-        app:layout_constraintTop_toTopOf="@id/GameBoardColumnTopCentre" />
+        app:layout_constraintBottom_toBottomOf="@id/gameBoardColumnBottomCentre"
+        app:layout_constraintRight_toRightOf="@id/gameBoardColumnMiddleCentre"
+        app:layout_constraintTop_toTopOf="@id/gameBoardColumnTopCentre" />
 
     <Button
-        android:id="@+id/GameButtonRestart"
+        android:id="@+id/gameButtonRestart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
