@@ -13,8 +13,6 @@ class Player(val name: String) {
         columns.add(column)
     }
 
-    fun getColumns() = columns
-
     fun resetScore() {
         score = 0
     }
